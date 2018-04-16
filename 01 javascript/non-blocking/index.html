@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button>Click me</button>
+
+    <script>
+        const button = document.querySelector("button");
+        if(!button) {
+            throw new Error("Button was not found");
+        }
+
+        button.addEventListener("click", function() {
+            const before = new Date();
+
+            while(true) {
+                const now = new Date();
+                if(now - before > 2500) {
+                    break;
+                }
+            }
+
+            console.log("Button was clicked");
+        });
+    </script>
+</body>
+</html>
